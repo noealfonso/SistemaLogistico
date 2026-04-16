@@ -1,28 +1,43 @@
 import java.util.ArrayList;
+/**
+ * Clase responsable de la gestión y monitoreo centralizado de la flota.
+ * Utiliza composición para mantener la lista de vehículos y polimorfismo 
+ * para gestionar el comportamiento de las unidades.
+ */
 
 public class CentroControl {
-    
-	//Composicion: el centro tiene una lista de vehiculos
+	/**
+     * Colección interna que almacena los vehículos registrados.
+     */
 	private ArrayList<Vehiculo> listaVehiculos;
 	
+	/**
+     * Constructor que inicializa la infraestructura del centro de control.
+     */
 	public CentroControl() {
-		this.listaVehiculos= new ArrayList<>();
+		this.listaVehiculos = new ArrayList<>();
 	}
 	
-	//Agregación: Método para añadir unidades externas al sistema
+	/**
+     * Registra una nueva unidad de transporte en el sistema.
+     * @param v Objeto de tipo Vehiculo (puede ser Camion o Dron).
+     */
 	public void registrarUnidad(Vehiculo v) {
 		listaVehiculos.add(v);
-		System.out.println("Sistema: Vehículo con ID " + v.getId() + " registrado en el centro de control");
+		System.out.println("Unidad registrada con éxito");
 	}
 	
-	//Polimorfismo: Recorre la lista y ejecuta el comportamiento de cada uno
-	public void monitorarFlota() {
-		System.out.println("\n--- INICIANDO MONITOREO DE FLOTA LOGÍSTICA ---");
-		
+	/**
+     * Ejecuta el monitoreo de toda la flota.
+     * Aplica POLIMORFISMO al llamar al método patronMovimiento() de cada objeto
+     * sin importar si es una clase u otra.
+     */
+	public void monitorearFlota() {
+		System.out.println("--- Iniciando Monitoreo ---");
 		for(Vehiculo v: listaVehiculos) {
 			v.patronMovimiento();
 		}
-		System.out.println("--- FIN DEL MONITOREO ---\n");
+		System.out.println("--- Finalizando Monitoreo ---");
 	}
-	
+
 }
