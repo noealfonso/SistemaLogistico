@@ -1,3 +1,4 @@
+
 /**
  * Interfaz que define las capacidades de conectividad para los vehículos autónomos.
  * Representa un contrato para la sincronización tecnológica con sistemas externos.
@@ -11,3 +12,4 @@ public interface IConectable {
 	void sincronizarGPS();
 
 }
+

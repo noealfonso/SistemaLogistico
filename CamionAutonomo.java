@@ -1,3 +1,4 @@
+
 /**
  * Clase que representa un camión con capacidades de conducción autónoma.
  * Hereda de la clase base Vehiculo e implementa la conectividad GPS.
