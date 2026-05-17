@@ -7,12 +7,12 @@ public abstract class Vehiculo {
     private String tipo;
 
     /**
-     * Constructor para inicializar un vehiculo con sus datos básicos
-     * @param id identificador unico del vehiculo
-     * @param tipo El tipo o categoria del vehiculo
+     * Constructor del vehículo.
+     * @param id identificador único del vehículo
      */
-    public Vehiculo(String id, String tipo) {
-        this.id= id;
+    public Vehiculo(String id, String tipo)
+    {
+        this.id = id;
         this.tipo= tipo;
     }
 
@@ -20,7 +20,6 @@ public abstract class Vehiculo {
      * Obtiene el ID del vehículo.
      * @return id del vehículo
      */
-
     public String getId()
     {
         return id;
@@ -38,6 +37,14 @@ public abstract class Vehiculo {
      */
     public void setTipo(String nuevoTipo){
         tipo= nuevoTipo;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" +
+                "id='" + id + '\'' +
+                ", tipo='" + tipo + '\'' +
+                '}';
     }
 
     /**
