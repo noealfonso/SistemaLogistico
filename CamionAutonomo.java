@@ -8,8 +8,8 @@ public class CamionAutonomo extends Vehiculo implements IConectable {
      * Constructor para el camión autónomo.
      * @param id Identificador único asignado al vehículo.
      */
-	public CamionAutonomo(int id) {
-		super(id);
+	public CamionAutonomo(String id, String tipo) {
+		super(id,tipo);
 	}
 	/**
      * Define el comportamiento específico de movimiento del camión.
