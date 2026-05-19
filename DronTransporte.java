@@ -9,10 +9,10 @@ public class DronTransporte extends Vehiculo{
      * @param id identificador único del vehículo.
      */
 
-    public DronTransporte(int id)
+    public DronTransporte(String id,String tipo)
     {
         //Llama al constructor de la clase padre (Vehiculo)
-        super(id);
+        super(id,tipo);
     }
 
     /**
